@@ -28,7 +28,7 @@ public class Splash extends AppCompatActivity {
             @Override
             public void run() {
                 if(hayConexion(Splash.this)){
-                    startActivity(new Intent(Splash.this, Registro.class));
+                    startActivity(new Intent(Splash.this, MainActivity.class));
                     finish();
                 }else{
                     //Toast.makeText(Splash.this, "No hay conexión", Toast.LENGTH_SHORT).show();

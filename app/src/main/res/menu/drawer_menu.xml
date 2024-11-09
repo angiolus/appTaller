@@ -1,0 +1,23 @@
+<!-- res/menu/drawer_menu.xml -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_stock"
+        android:title="Stock"
+        android:icon="@drawable/ic_stock"/>
+    <item
+        android:id="@+id/nav_sales"
+        android:title="Ventas"
+        android:icon="@drawable/ic_sales"/>
+    <item
+        android:id="@+id/nav_history"
+        android:title="Historial"
+        android:icon="@drawable/ic_history"/>
+    <item
+        android:id="@+id/nav_add_pyme"
+        android:title="Añadir Pyme"
+        android:icon="@drawable/ic_add_pyme"/>
+    <item
+        android:id="@+id/nav_view_pyme"
+        android:title="Ver Pyme"
+        android:icon="@drawable/ic_view_pyme"/>
+</menu>

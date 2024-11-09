@@ -28,11 +28,11 @@
         android:layout_height="48dp"
         android:hint="Monto total" />
 
-    <Button
+    <ImageButton
         android:id="@+id/addSaleButton"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:text="Añadir Venta" />
+        android:src="@drawable/ic_add" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/saleRecyclerView"

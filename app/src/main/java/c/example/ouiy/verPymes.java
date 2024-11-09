@@ -2,8 +2,12 @@ package c.example.ouiy;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
+import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -28,6 +32,19 @@ public class verPymes extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ver_pymes);
+
+        final ActionBar miActionBar = getSupportActionBar();
+        View viewActionBar = getLayoutInflater().inflate(R.layout.actionbar_customizado, null);
+        ActionBar.LayoutParams misParametros = new ActionBar.LayoutParams(
+                ActionBar.LayoutParams.WRAP_CONTENT,
+                ActionBar.LayoutParams.WRAP_CONTENT,
+                Gravity.CENTER
+        );
+        TextView tituloActionBar = viewActionBar.findViewById(R.id.actionbar_titulo);
+        tituloActionBar.setText("PYME HUB");
+        miActionBar.setCustomView(viewActionBar, misParametros);
+        miActionBar.setDisplayShowCustomEnabled(true);
+        miActionBar.setDisplayShowTitleEnabled(false);
 
         recyclerViewPymes = findViewById(R.id.recyclerViewPymes);
         recyclerViewPymes.setLayoutManager(new LinearLayoutManager(this));

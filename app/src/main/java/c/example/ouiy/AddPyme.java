@@ -2,12 +2,15 @@ package c.example.ouiy;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -29,6 +32,19 @@ public class AddPyme extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_pyme);
+
+        final ActionBar miActionBar = getSupportActionBar();
+        View viewActionBar = getLayoutInflater().inflate(R.layout.actionbar_customizado, null);
+        ActionBar.LayoutParams misParametros = new ActionBar.LayoutParams(
+                ActionBar.LayoutParams.WRAP_CONTENT,
+                ActionBar.LayoutParams.WRAP_CONTENT,
+                Gravity.CENTER
+        );
+        TextView tituloActionBar = viewActionBar.findViewById(R.id.actionbar_titulo);
+        tituloActionBar.setText("PYME HUB");
+        miActionBar.setCustomView(viewActionBar, misParametros);
+        miActionBar.setDisplayShowCustomEnabled(true);
+        miActionBar.setDisplayShowTitleEnabled(false);
 
         auth = FirebaseAuth.getInstance();
         firestore = FirebaseFirestore.getInstance();

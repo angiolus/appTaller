@@ -8,13 +8,14 @@
         android:id="@+id/pympeSpinner"
         android:layout_width="match_parent"
         android:layout_height="48dp" /> <!-- Asegura que sea al menos 48dp de alto -->
-
-
-    <Button
+    <ImageButton
         android:id="@+id/addProductButton"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/add_product" />
+        android:layout_height="48dp"
+        android:src="@drawable/ic_add"
+        android:layout_gravity="right"></ImageButton>
+
+
 
     <EditText
         android:id="@+id/productDescriptionEditText"

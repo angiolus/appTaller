@@ -9,10 +9,17 @@
 
     <string name="seleccionar_pyme">Seleccionar PYME</string>
     <!-- En strings.xml -->
-    <string name="add_product">Add Product</string>
-    <string name="product_description">Description</string>
-    <string name="product_name">Name</string>
-    <string name="product_quantity">Quantity</string>
+    <string name="add_product">Agregar Producto</string>
+    <string name="product_description">Descripcion</string>
+    <string name="product_name">Nombre</string>
+    <string name="product_quantity">Cantidad</string>
+    <string name="title_activity_inteno_nav">intenoNav</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
 
 
 </resources>

@@ -3,16 +3,21 @@ package c.example.ouiy;
 import android.app.AlertDialog;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
+
+import androidx.appcompat.app.ActionBar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -39,7 +44,7 @@ public class panStock extends AppCompatActivity {
     private FirebaseAuth auth;
     private Spinner pymeSpinner;
     private EditText productNameEditText, productQuantityEditText, productDescriptionEditText;
-    private Button addProductButton;
+    private ImageButton addProductButton;
     private RecyclerView productRecyclerView;
     private ProductAdapter productAdapter;
 
@@ -52,6 +57,19 @@ public class panStock extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pan_stock);
+
+        final ActionBar miActionBar = getSupportActionBar();
+        View viewActionBar = getLayoutInflater().inflate(R.layout.actionbar_customizado, null);
+        ActionBar.LayoutParams misParametros = new ActionBar.LayoutParams(
+                ActionBar.LayoutParams.WRAP_CONTENT,
+                ActionBar.LayoutParams.WRAP_CONTENT,
+                Gravity.CENTER
+        );
+        TextView tituloActionBar = viewActionBar.findViewById(R.id.actionbar_titulo);
+        tituloActionBar.setText("PYME HUB");
+        miActionBar.setCustomView(viewActionBar, misParametros);
+        miActionBar.setDisplayShowCustomEnabled(true);
+        miActionBar.setDisplayShowTitleEnabled(false);
 
         firestore = FirebaseFirestore.getInstance();
         auth = FirebaseAuth.getInstance();
@@ -183,7 +201,7 @@ public class panStock extends AppCompatActivity {
         EditText nameEditText = dialogView.findViewById(R.id.editProductNameEditText);
         EditText descriptionEditText = dialogView.findViewById(R.id.editProductDescriptionEditText);
         EditText quantityEditText = dialogView.findViewById(R.id.editProductQuantityEditText);
-        Button updateButton = dialogView.findViewById(R.id.updateProductButton);
+        ImageButton updateButton = dialogView.findViewById(R.id.updateProductButton);
 
         nameEditText.setText((String) product.get("name"));
         descriptionEditText.setText((String) product.get("description"));
