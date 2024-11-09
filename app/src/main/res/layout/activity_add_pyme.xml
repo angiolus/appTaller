@@ -15,8 +15,8 @@
         android:id="@+id/emailPymeEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
-        android:hint="Correo de la pyme" />
+        android:hint="Correo de la pyme"
+        android:inputType="textEmailAddress" />
 
     <Button
         android:id="@+id/addPymeButton"

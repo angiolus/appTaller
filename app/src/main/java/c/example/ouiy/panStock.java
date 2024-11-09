@@ -95,7 +95,8 @@ public class panStock extends AppCompatActivity {
             }
 
             @Override
-            public void onNothingSelected(AdapterView<?> parent) {}
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
         });
 
         addProductButton.setOnClickListener(v -> addProductToPyme());

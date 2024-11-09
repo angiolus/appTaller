@@ -10,12 +10,13 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:orientation="vertical">
+
         <TextView
             android:id="@+id/productName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/productDescription"
@@ -30,45 +31,53 @@
             android:textSize="14sp" />
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"/>
+        android:layout_weight="1" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1">
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
                 <ImageButton
                     android:id="@+id/editButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:src="@drawable/ic_edit"/></RelativeLayout>
+                    android:src="@drawable/ic_edit" />
+            </RelativeLayout>
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1">
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
                 <ImageButton
                     android:id="@+id/deleteButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_delete"
-                    android:layout_centerInParent="true"/>
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_delete" />
             </RelativeLayout>
         </LinearLayout>
-
 
 
     </LinearLayout>

@@ -27,10 +27,10 @@ public class Splash extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                if(hayConexion(Splash.this)){
+                if (hayConexion(Splash.this)) {
                     startActivity(new Intent(Splash.this, MainActivity.class));
                     finish();
-                }else{
+                } else {
                     //Toast.makeText(Splash.this, "No hay conexión", Toast.LENGTH_SHORT).show();
                     AlertDialog.Builder miAlert = new AlertDialog.Builder(Splash.this);
                     miAlert.setTitle("No hay acceso a internet");
@@ -46,47 +46,37 @@ public class Splash extends AppCompatActivity {
                     alertPro.setCanceledOnTouchOutside(false);
 
 
-
                 }
 
             }
-        },2000);
+        }, 2000);
 
 
     }
 
-    public static boolean hayConexion(Context context){
+    public static boolean hayConexion(Context context) {
         ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo netinfo = cm.getActiveNetworkInfo();
 
-        if(netinfo != null && netinfo.isConnectedOrConnecting()){
+        if (netinfo != null && netinfo.isConnectedOrConnecting()) {
             NetworkInfo wifi = cm.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
             NetworkInfo mobile = cm.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
 
-            if((wifi != null && wifi.isConnectedOrConnecting()) ||
-                    (mobile != null && mobile.isConnectedOrConnecting())){
+            if ((wifi != null && wifi.isConnectedOrConnecting()) ||
+                    (mobile != null && mobile.isConnectedOrConnecting())) {
                 return true;
-            }else{
+            } else {
                 //Hay conexion pero no hay trafico
                 return false;
             }
 
 
-
-
-
-
-
-
-
-        }else{
+        } else {
             return false;
         }
 
 
     }
-
-
 
 
 }

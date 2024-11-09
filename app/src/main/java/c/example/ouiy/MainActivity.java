@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
     private FirebaseAuth auth;
     private FirebaseFirestore firestore;  // Instancia de Firestore
-    private EditText loginCorreo, loginClave ;
+    private EditText loginCorreo, loginClave;
     private Button botonLogin;
     private TextView redirectRegistro;
 

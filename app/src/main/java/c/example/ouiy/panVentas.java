@@ -92,7 +92,8 @@ public class panVentas extends AppCompatActivity {
             }
 
             @Override
-            public void onNothingSelected(AdapterView<?> parent) {}
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
         });
 
         addSaleButton.setOnClickListener(v -> addSaleToPyme());

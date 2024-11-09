@@ -5,7 +5,8 @@ public class Venta {
     private int cantidad;
     private String descripcion;
 
-    public Venta() {}
+    public Venta() {
+    }
 
     public Venta(String producto, int cantidad, String descripcion) {
         this.producto = producto;
